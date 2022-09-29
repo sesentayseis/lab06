@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block barra  %}
+  {%for cate in cate%}
+    <a href="#" class="list-group-item">{{cate.nombre}}</a>
+{%endfor%}
+{% endblock %}
+{% block content  %}
+<br>
+<br>
+<div class="col-lg-10 col-md-10 mb-4">
+    <div class="card h-100">
+     
+      <div class="card-body">
+     
+        <h1 class="card-title">{{producto.nombre}}</h1>
+
+        <h5>{{producto.precio}} soles</h5>
+        <p class="card-text">Categoria: {{producto.categoria}}</p>
+        <p class="card-text">Sotck: {{producto.stock}}</p>
+      </div>
+      
+    </div>
+  </div>
+{% endblock %}
